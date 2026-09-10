@@ -1,0 +1,2620 @@
+{
+  "device": {
+    "serial": "d073d5xxxxxx",
+    "port": 56700,
+    "product": 176,
+    "zones": 64,
+    "layout": "8x8 row-major Set64",
+    "uplight_index": 63,
+    "orientation": "raw Set64 index order, no rotation or flips; y=0 is image top in ideal.png"
+  },
+  "timestamp_utc": "2026-08-26T14:28:14Z",
+  "palette": {
+    "space": "HSV grid -> CIELAB, farthest-point max-min selection",
+    "unique_colors": 63,
+    "peak_hsv_value": 0.72,
+    "values": [
+      0.3,
+      0.44,
+      0.58,
+      0.72
+    ],
+    "saturations": [
+      0.45,
+      0.72,
+      1.0
+    ],
+    "hue_step_deg": 4
+  },
+  "metrics": {
+    "neighbor_deltaE_lab": {
+      "min": 49.563,
+      "mean": 91.5306,
+      "max": 179.0132,
+      "min_orthogonal": 52.3957,
+      "mean_orthogonal": 85.4954,
+      "pairs": 207
+    },
+    "neighbor_distance_oklab": {
+      "min": 0.129393,
+      "mean": 0.308321,
+      "max": 0.548088,
+      "min_orthogonal": 0.157017,
+      "mean_orthogonal": 0.294368,
+      "pairs": 207
+    },
+    "global_min_pairwise_deltaE_lab": 16.8529,
+    "global_min_pairwise_oklab": 0.032843,
+    "peak_brightness_fraction": 0.72
+  },
+  "zones": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "uplight": false,
+      "rgb_hex": "#B86A65",
+      "rgb_float": [
+        0.72,
+        0.4176,
+        0.396
+      ],
+      "hsbk_raw": {
+        "hue": 728,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 3.999,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        53.4834,
+        30.0989,
+        16.4624
+      ],
+      "oklab": [
+        0.610457,
+        0.090423,
+        0.041663
+      ],
+      "get64_readback": {
+        "hue": 728,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 1,
+      "x": 1,
+      "y": 0,
+      "uplight": false,
+      "rgb_hex": "#617000",
+      "rgb_float": [
+        0.381333,
+        0.44,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 12379,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 68.001,
+        "saturation": 1.0,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        44.5002,
+        -18.8105,
+        50.0783
+      ],
+      "oklab": [
+        0.515167,
+        -0.057523,
+        0.105885
+      ],
+      "get64_readback": {
+        "hue": 12379,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 2,
+      "x": 2,
+      "y": 0,
+      "uplight": false,
+      "rgb_hex": "#703E4B",
+      "rgb_float": [
+        0.44,
+        0.242,
+        0.2948
+      ],
+      "hsbk_raw": {
+        "hue": 62622,
+        "saturation": 29491,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 343.998,
+        "saturation": 0.45,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        32.663,
+        23.8299,
+        1.5506
+      ],
+      "oklab": [
+        0.428771,
+        0.072222,
+        0.004361
+      ],
+      "get64_readback": {
+        "hue": 62622,
+        "saturation": 29491,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 3,
+      "x": 3,
+      "y": 0,
+      "uplight": false,
+      "rgb_hex": "#00704B",
+      "rgb_float": [
+        0.0,
+        0.44,
+        0.293333
+      ],
+      "hsbk_raw": {
+        "hue": 29127,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 160.002,
+        "saturation": 1.0,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        41.4328,
+        -37.1903,
+        13.2477
+      ],
+      "oklab": [
+        0.48229,
+        -0.100956,
+        0.033556
+      ],
+      "get64_readback": {
+        "hue": 29127,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 4,
+      "x": 4,
+      "y": 0,
+      "uplight": false,
+      "rgb_hex": "#B865A2",
+      "rgb_float": [
+        0.72,
+        0.396,
+        0.6336
+      ],
+      "hsbk_raw": {
+        "hue": 57525,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 315.999,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        54.0692,
+        41.4343,
+        -18.2591
+      ],
+      "oklab": [
+        0.620707,
+        0.120735,
+        -0.048983
+      ],
+      "get64_readback": {
+        "hue": 57525,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 5,
+      "x": 5,
+      "y": 0,
+      "uplight": false,
+      "rgb_hex": "#947951",
+      "rgb_float": [
+        0.58,
+        0.4756,
+        0.319
+      ],
+      "hsbk_raw": {
+        "hue": 6554,
+        "saturation": 29491,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 36.003,
+        "saturation": 0.45,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        52.5414,
+        4.7314,
+        25.7388
+      ],
+      "oklab": [
+        0.592657,
+        0.014431,
+        0.06312
+      ],
+      "get64_readback": {
+        "hue": 6554,
+        "saturation": 29491,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 6,
+      "x": 6,
+      "y": 0,
+      "uplight": false,
+      "rgb_hex": "#000F4C",
+      "rgb_float": [
+        0.0,
+        0.06,
+        0.3
+      ],
+      "hsbk_raw": {
+        "hue": 41506,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 228.003,
+        "saturation": 1.0,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        7.9378,
+        22.1408,
+        -38.9179
+      ],
+      "oklab": [
+        0.215141,
+        -0.013012,
+        -0.11297
+      ],
+      "get64_readback": {
+        "hue": 41506,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 7,
+      "x": 7,
+      "y": 0,
+      "uplight": false,
+      "rgb_hex": "#4B703E",
+      "rgb_float": [
+        0.2948,
+        0.44,
+        0.242
+      ],
+      "hsbk_raw": {
+        "hue": 18932,
+        "saturation": 29491,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 103.998,
+        "saturation": 0.45,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        43.4773,
+        -23.573,
+        23.938
+      ],
+      "oklab": [
+        0.50457,
+        -0.064542,
+        0.058586
+      ],
+      "get64_readback": {
+        "hue": 18932,
+        "saturation": 29491,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 8,
+      "x": 0,
+      "y": 1,
+      "uplight": false,
+      "rgb_hex": "#451F70",
+      "rgb_float": [
+        0.27104,
+        0.1232,
+        0.44
+      ],
+      "hsbk_raw": {
+        "hue": 48787,
+        "saturation": 47185,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 267.999,
+        "saturation": 0.72,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        21.7466,
+        35.2555,
+        -39.8822
+      ],
+      "oklab": [
+        0.340941,
+        0.068057,
+        -0.113608
+      ],
+      "get64_readback": {
+        "hue": 48787,
+        "saturation": 47185,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 9,
+      "x": 1,
+      "y": 1,
+      "uplight": false,
+      "rgb_hex": "#00B8B8",
+      "rgb_float": [
+        0.0,
+        0.72,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 32768,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 180.003,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        67.6917,
+        -37.5727,
+        -11.0412
+      ],
+      "oklab": [
+        0.707424,
+        -0.116766,
+        -0.030783
+      ],
+      "get64_readback": {
+        "hue": 32768,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 10,
+      "x": 2,
+      "y": 1,
+      "uplight": false,
+      "rgb_hex": "#7133B8",
+      "rgb_float": [
+        0.44352,
+        0.2016,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 48787,
+        "saturation": 47185,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 267.999,
+        "saturation": 0.72,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        36.6767,
+        52.611,
+        -59.303
+      ],
+      "oklab": [
+        0.477556,
+        0.098912,
+        -0.169208
+      ],
+      "get64_readback": {
+        "hue": 48787,
+        "saturation": 47185,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 11,
+      "x": 3,
+      "y": 1,
+      "uplight": false,
+      "rgb_hex": "#B8B800",
+      "rgb_float": [
+        0.72,
+        0.72,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 10922,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 59.997,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        72.4001,
+        -16.8408,
+        73.8193
+      ],
+      "oklab": [
+        0.756322,
+        -0.055763,
+        0.15515
+      ],
+      "get64_readback": {
+        "hue": 10922,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 12,
+      "x": 4,
+      "y": 1,
+      "uplight": false,
+      "rgb_hex": "#0031B8",
+      "rgb_float": [
+        0.0,
+        0.192,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 40777,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 223.998,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        28.4746,
+        41.985,
+        -73.058
+      ],
+      "oklab": [
+        0.400124,
+        -0.024156,
+        -0.212064
+      ],
+      "get64_readback": {
+        "hue": 40777,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 13,
+      "x": 5,
+      "y": 1,
+      "uplight": false,
+      "rgb_hex": "#007007",
+      "rgb_float": [
+        0.0,
+        0.44,
+        0.029333
+      ],
+      "hsbk_raw": {
+        "hue": 22573,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 123.999,
+        "saturation": 1.0,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        40.6513,
+        -46.6968,
+        43.5805
+      ],
+      "oklab": [
+        0.473262,
+        -0.126474,
+        0.095282
+      ],
+      "get64_readback": {
+        "hue": 22573,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 14,
+      "x": 6,
+      "y": 1,
+      "uplight": false,
+      "rgb_hex": "#B80000",
+      "rgb_float": [
+        0.72,
+        0.0,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 0,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 0.0,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        38.1005,
+        62.5793,
+        52.4995
+      ],
+      "oklab": [
+        0.490646,
+        0.175694,
+        0.098329
+      ],
+      "get64_readback": {
+        "hue": 0,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 15,
+      "x": 7,
+      "y": 1,
+      "uplight": false,
+      "rgb_hex": "#B86581",
+      "rgb_float": [
+        0.72,
+        0.396,
+        0.504
+      ],
+      "hsbk_raw": {
+        "hue": 61894,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 339.999,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        52.9703,
+        36.413,
+        -0.484
+      ],
+      "oklab": [
+        0.608809,
+        0.110257,
+        -0.000784
+      ],
+      "get64_readback": {
+        "hue": 61894,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 16,
+      "x": 0,
+      "y": 2,
+      "uplight": false,
+      "rgb_hex": "#4C3300",
+      "rgb_float": [
+        0.3,
+        0.2,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 7282,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 40.002,
+        "saturation": 1.0,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        23.4222,
+        6.9096,
+        32.7139
+      ],
+      "oklab": [
+        0.342372,
+        0.01476,
+        0.069808
+      ],
+      "get64_readback": {
+        "hue": 7282,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 17,
+      "x": 1,
+      "y": 2,
+      "uplight": false,
+      "rgb_hex": "#6C9400",
+      "rgb_float": [
+        0.425333,
+        0.58,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 13835,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 75.999,
+        "saturation": 1.0,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        56.4516,
+        -31.6051,
+        59.46
+      ],
+      "oklab": [
+        0.613957,
+        -0.092535,
+        0.12644
+      ],
+      "get64_readback": {
+        "hue": 13835,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 18,
+      "x": 2,
+      "y": 2,
+      "uplight": false,
+      "rgb_hex": "#4C1400",
+      "rgb_float": [
+        0.3,
+        0.08,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 2913,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 16.002,
+        "saturation": 1.0,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        15.8612,
+        25.4202,
+        24.0949
+      ],
+      "oklab": [
+        0.284288,
+        0.069271,
+        0.057341
+      ],
+      "get64_readback": {
+        "hue": 2913,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 19,
+      "x": 3,
+      "y": 2,
+      "uplight": false,
+      "rgb_hex": "#519487",
+      "rgb_float": [
+        0.319,
+        0.58,
+        0.5278
+      ],
+      "hsbk_raw": {
+        "hue": 30583,
+        "saturation": 29491,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 168.0,
+        "saturation": 0.45,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        56.7322,
+        -24.5736,
+        0.4408
+      ],
+      "oklab": [
+        0.617994,
+        -0.071512,
+        0.000778
+      ],
+      "get64_readback": {
+        "hue": 30583,
+        "saturation": 29491,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 20,
+      "x": 4,
+      "y": 2,
+      "uplight": false,
+      "rgb_hex": "#70002D",
+      "rgb_float": [
+        0.44,
+        0.0,
+        0.176
+      ],
+      "hsbk_raw": {
+        "hue": 61166,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 336.0,
+        "saturation": 1.0,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        22.4702,
+        45.5414,
+        7.3228
+      ],
+      "oklab": [
+        0.34988,
+        0.138931,
+        0.018539
+      ],
+      "get64_readback": {
+        "hue": 61166,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 21,
+      "x": 5,
+      "y": 2,
+      "uplight": false,
+      "rgb_hex": "#65ADB8",
+      "rgb_float": [
+        0.396,
+        0.6768,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 34224,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 188.001,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        66.4703,
+        -19.5076,
+        -12.6588
+      ],
+      "oklab": [
+        0.703451,
+        -0.06481,
+        -0.034842
+      ],
+      "get64_readback": {
+        "hue": 34224,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 22,
+      "x": 6,
+      "y": 2,
+      "uplight": false,
+      "rgb_hex": "#250070",
+      "rgb_float": [
+        0.146667,
+        0.0,
+        0.44
+      ],
+      "hsbk_raw": {
+        "hue": 47331,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 260.001,
+        "saturation": 1.0,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        13.0759,
+        44.3161,
+        -54.282
+      ],
+      "oklab": [
+        0.271815,
+        0.036929,
+        -0.15637
+      ],
+      "get64_readback": {
+        "hue": 47331,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 23,
+      "x": 7,
+      "y": 2,
+      "uplight": false,
+      "rgb_hex": "#004C38",
+      "rgb_float": [
+        0.0,
+        0.3,
+        0.22
+      ],
+      "hsbk_raw": {
+        "hue": 29855,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 164.001,
+        "saturation": 1.0,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        28.1786,
+        -26.7372,
+        6.2923
+      ],
+      "oklab": [
+        0.371486,
+        -0.073749,
+        0.016059
+      ],
+      "get64_readback": {
+        "hue": 29855,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 24,
+      "x": 0,
+      "y": 3,
+      "uplight": false,
+      "rgb_hex": "#700070",
+      "rgb_float": [
+        0.44,
+        0.0,
+        0.44
+      ],
+      "hsbk_raw": {
+        "hue": 54612,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 299.997,
+        "saturation": 1.0,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        25.6624,
+        53.6223,
+        -33.2019
+      ],
+      "oklab": [
+        0.383017,
+        0.149875,
+        -0.092336
+      ],
+      "get64_readback": {
+        "hue": 54612,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 25,
+      "x": 1,
+      "y": 3,
+      "uplight": false,
+      "rgb_hex": "#0093B8",
+      "rgb_float": [
+        0.0,
+        0.576,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 34952,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 192.0,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        56.3586,
+        -19.428,
+        -28.3006
+      ],
+      "oklab": [
+        0.615637,
+        -0.083397,
+        -0.079624
+      ],
+      "get64_readback": {
+        "hue": 34952,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 26,
+      "x": 2,
+      "y": 3,
+      "uplight": false,
+      "rgb_hex": "#800094",
+      "rgb_float": [
+        0.502667,
+        0.0,
+        0.58
+      ],
+      "hsbk_raw": {
+        "hue": 53156,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 291.999,
+        "saturation": 1.0,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        31.2051,
+        62.2496,
+        -46.5761
+      ],
+      "oklab": [
+        0.435275,
+        0.161388,
+        -0.131004
+      ],
+      "get64_readback": {
+        "hue": 53156,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 27,
+      "x": 3,
+      "y": 3,
+      "uplight": false,
+      "rgb_hex": "#6EB800",
+      "rgb_float": [
+        0.432,
+        0.72,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 15291,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 83.997,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        67.6052,
+        -46.5141,
+        68.0909
+      ],
+      "oklab": [
+        0.70527,
+        -0.132372,
+        0.145515
+      ],
+      "get64_readback": {
+        "hue": 15291,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 28,
+      "x": 4,
+      "y": 3,
+      "uplight": false,
+      "rgb_hex": "#3357B8",
+      "rgb_float": [
+        0.2016,
+        0.33984,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 40777,
+        "saturation": 47185,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 223.998,
+        "saturation": 0.72,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        39.4426,
+        21.0819,
+        -55.0448
+      ],
+      "oklab": [
+        0.485543,
+        -0.011951,
+        -0.158344
+      ],
+      "get64_readback": {
+        "hue": 40777,
+        "saturation": 47185,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 29,
+      "x": 5,
+      "y": 3,
+      "uplight": false,
+      "rgb_hex": "#3D4C00",
+      "rgb_float": [
+        0.24,
+        0.3,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 13107,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 72.0,
+        "saturation": 1.0,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        30.0015,
+        -16.6543,
+        37.9417
+      ],
+      "oklab": [
+        0.390931,
+        -0.049902,
+        0.080415
+      ],
+      "get64_readback": {
+        "hue": 13107,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 30,
+      "x": 6,
+      "y": 3,
+      "uplight": false,
+      "rgb_hex": "#00B800",
+      "rgb_float": [
+        0.0,
+        0.72,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 21845,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 120.0,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        65.052,
+        -67.3379,
+        64.9912
+      ],
+      "oklab": [
+        0.676983,
+        -0.182745,
+        0.140249
+      ],
+      "get64_readback": {
+        "hue": 21845,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 31,
+      "x": 7,
+      "y": 3,
+      "uplight": false,
+      "rgb_hex": "#B8A765",
+      "rgb_float": [
+        0.72,
+        0.6552,
+        0.396
+      ],
+      "hsbk_raw": {
+        "hue": 8738,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 48.0,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        68.5675,
+        -3.2443,
+        36.2548
+      ],
+      "oklab": [
+        0.727939,
+        -0.008854,
+        0.087766
+      ],
+      "get64_readback": {
+        "hue": 8738,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 32,
+      "x": 0,
+      "y": 4,
+      "uplight": false,
+      "rgb_hex": "#29944D",
+      "rgb_float": [
+        0.1624,
+        0.58,
+        0.3016
+      ],
+      "hsbk_raw": {
+        "hue": 25486,
+        "saturation": 47185,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 140.001,
+        "saturation": 0.72,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        54.1979,
+        -46.0201,
+        29.0154
+      ],
+      "oklab": [
+        0.58961,
+        -0.123893,
+        0.070936
+      ],
+      "get64_readback": {
+        "hue": 25486,
+        "saturation": 47185,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 33,
+      "x": 1,
+      "y": 4,
+      "uplight": false,
+      "rgb_hex": "#945B29",
+      "rgb_float": [
+        0.58,
+        0.35728,
+        0.1624
+      ],
+      "hsbk_raw": {
+        "hue": 5097,
+        "saturation": 47185,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 27.999,
+        "saturation": 0.72,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        44.1634,
+        18.7713,
+        37.4276
+      ],
+      "oklab": [
+        0.525588,
+        0.050611,
+        0.084533
+      ],
+      "get64_readback": {
+        "hue": 5097,
+        "saturation": 47185,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 34,
+      "x": 2,
+      "y": 4,
+      "uplight": false,
+      "rgb_hex": "#004C0A",
+      "rgb_float": [
+        0.0,
+        0.3,
+        0.04
+      ],
+      "hsbk_raw": {
+        "hue": 23301,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 127.998,
+        "saturation": 1.0,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        27.4631,
+        -35.2574,
+        30.8383
+      ],
+      "oklab": [
+        0.36322,
+        -0.095154,
+        0.068972
+      ],
+      "get64_readback": {
+        "hue": 23301,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 35,
+      "x": 3,
+      "y": 4,
+      "uplight": false,
+      "rgb_hex": "#943F29",
+      "rgb_float": [
+        0.58,
+        0.24592,
+        0.1624
+      ],
+      "hsbk_raw": {
+        "hue": 2185,
+        "saturation": 47185,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 12.003,
+        "saturation": 0.72,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        37.7964,
+        34.4526,
+        30.3703
+      ],
+      "oklab": [
+        0.476804,
+        0.098251,
+        0.069337
+      ],
+      "get64_readback": {
+        "hue": 2185,
+        "saturation": 47185,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 36,
+      "x": 4,
+      "y": 4,
+      "uplight": false,
+      "rgb_hex": "#65B897",
+      "rgb_float": [
+        0.396,
+        0.72,
+        0.5904
+      ],
+      "hsbk_raw": {
+        "hue": 28398,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 155.997,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        68.8224,
+        -33.0426,
+        9.0402
+      ],
+      "oklab": [
+        0.719373,
+        -0.092498,
+        0.023229
+      ],
+      "get64_readback": {
+        "hue": 28398,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 37,
+      "x": 5,
+      "y": 4,
+      "uplight": false,
+      "rgb_hex": "#B80056",
+      "rgb_float": [
+        0.72,
+        0.0,
+        0.336
+      ],
+      "hsbk_raw": {
+        "hue": 60438,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 332.001,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        39.2603,
+        65.705,
+        5.959
+      ],
+      "oklab": [
+        0.502864,
+        0.201608,
+        0.015646
+      ],
+      "get64_readback": {
+        "hue": 60438,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 38,
+      "x": 6,
+      "y": 4,
+      "uplight": false,
+      "rgb_hex": "#004F94",
+      "rgb_float": [
+        0.0,
+        0.309333,
+        0.58
+      ],
+      "hsbk_raw": {
+        "hue": 37865,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 208.002,
+        "saturation": 1.0,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        33.3683,
+        7.4427,
+        -43.6054
+      ],
+      "oklab": [
+        0.427275,
+        -0.038644,
+        -0.125435
+      ],
+      "get64_readback": {
+        "hue": 37865,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 39,
+      "x": 7,
+      "y": 4,
+      "uplight": false,
+      "rgb_hex": "#4C1520",
+      "rgb_float": [
+        0.3,
+        0.084,
+        0.1272
+      ],
+      "hsbk_raw": {
+        "hue": 63350,
+        "saturation": 47185,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 347.997,
+        "saturation": 0.72,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        16.5827,
+        26.9006,
+        6.8091
+      ],
+      "oklab": [
+        0.291411,
+        0.081361,
+        0.017272
+      ],
+      "get64_readback": {
+        "hue": 63350,
+        "saturation": 47185,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 40,
+      "x": 0,
+      "y": 5,
+      "uplight": false,
+      "rgb_hex": "#553E70",
+      "rgb_float": [
+        0.3344,
+        0.242,
+        0.44
+      ],
+      "hsbk_raw": {
+        "hue": 48787,
+        "saturation": 29491,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 267.999,
+        "saturation": 0.45,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        30.7173,
+        21.4637,
+        -25.4355
+      ],
+      "oklab": [
+        0.41142,
+        0.04856,
+        -0.070903
+      ],
+      "get64_readback": {
+        "hue": 48787,
+        "saturation": 29491,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 41,
+      "x": 1,
+      "y": 5,
+      "uplight": false,
+      "rgb_hex": "#8700B8",
+      "rgb_float": [
+        0.528,
+        0.0,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 51700,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 284.001,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        35.1341,
+        69.5802,
+        -61.6855
+      ],
+      "oklab": [
+        0.473242,
+        0.158963,
+        -0.175172
+      ],
+      "get64_readback": {
+        "hue": 51700,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 42,
+      "x": 2,
+      "y": 5,
+      "uplight": false,
+      "rgb_hex": "#296994",
+      "rgb_float": [
+        0.1624,
+        0.41296,
+        0.58
+      ],
+      "hsbk_raw": {
+        "hue": 37137,
+        "saturation": 47185,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 204.003,
+        "saturation": 0.72,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        42.4283,
+        -5.6342,
+        -29.169
+      ],
+      "oklab": [
+        0.500833,
+        -0.044777,
+        -0.082352
+      ],
+      "get64_readback": {
+        "hue": 37137,
+        "saturation": 47185,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 43,
+      "x": 3,
+      "y": 5,
+      "uplight": false,
+      "rgb_hex": "#B8009F",
+      "rgb_float": [
+        0.72,
+        0.0,
+        0.624
+      ],
+      "hsbk_raw": {
+        "hue": 56069,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 308.001,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        42.2326,
+        73.3242,
+        -35.1849
+      ],
+      "oklab": [
+        0.533862,
+        0.215814,
+        -0.096351
+      ],
+      "get64_readback": {
+        "hue": 56069,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 44,
+      "x": 4,
+      "y": 5,
+      "uplight": false,
+      "rgb_hex": "#002E4C",
+      "rgb_float": [
+        0.0,
+        0.18,
+        0.3
+      ],
+      "hsbk_raw": {
+        "hue": 37137,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 204.003,
+        "saturation": 1.0,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        17.8036,
+        -1.1983,
+        -22.9084
+      ],
+      "oklab": [
+        0.29026,
+        -0.03109,
+        -0.065412
+      ],
+      "get64_readback": {
+        "hue": 37137,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 45,
+      "x": 5,
+      "y": 5,
+      "uplight": false,
+      "rgb_hex": "#705200",
+      "rgb_float": [
+        0.44,
+        0.322667,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 8010,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 44.001,
+        "saturation": 1.0,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        36.9956,
+        5.6035,
+        45.3437
+      ],
+      "oklab": [
+        0.458919,
+        0.00953,
+        0.093682
+      ],
+      "get64_readback": {
+        "hue": 8010,
+        "saturation": 65535,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 46,
+      "x": 6,
+      "y": 5,
+      "uplight": false,
+      "rgb_hex": "#00B887",
+      "rgb_float": [
+        0.0,
+        0.72,
+        0.528
+      ],
+      "hsbk_raw": {
+        "hue": 29855,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 164.001,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        66.4061,
+        -51.0075,
+        14.0299
+      ],
+      "oklab": [
+        0.692627,
+        -0.13987,
+        0.035766
+      ],
+      "get64_readback": {
+        "hue": 29855,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 47,
+      "x": 7,
+      "y": 5,
+      "uplight": false,
+      "rgb_hex": "#948000",
+      "rgb_float": [
+        0.58,
+        0.502667,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 9466,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 51.999,
+        "saturation": 1.0,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        53.7854,
+        -3.7091,
+        58.9069
+      ],
+      "oklab": [
+        0.600373,
+        -0.018063,
+        0.122883
+      ],
+      "get64_readback": {
+        "hue": 9466,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 48,
+      "x": 0,
+      "y": 6,
+      "uplight": false,
+      "rgb_hex": "#81B865",
+      "rgb_float": [
+        0.504,
+        0.72,
+        0.396
+      ],
+      "hsbk_raw": {
+        "hue": 18204,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 99.999,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        69.243,
+        -33.2152,
+        36.2612
+      ],
+      "oklab": [
+        0.723365,
+        -0.091188,
+        0.088222
+      ],
+      "get64_readback": {
+        "hue": 18204,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 49,
+      "x": 1,
+      "y": 6,
+      "uplight": false,
+      "rgb_hex": "#943100",
+      "rgb_float": [
+        0.58,
+        0.193333,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 3641,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 20.001,
+        "saturation": 1.0,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        35.024,
+        39.6974,
+        46.9126
+      ],
+      "oklab": [
+        0.45487,
+        0.107941,
+        0.09178
+      ],
+      "get64_readback": {
+        "hue": 3641,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 50,
+      "x": 2,
+      "y": 6,
+      "uplight": false,
+      "rgb_hex": "#1E9400",
+      "rgb_float": [
+        0.116,
+        0.58,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 19660,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 107.997,
+        "saturation": 1.0,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        53.4027,
+        -54.7747,
+        55.7728
+      ],
+      "oklab": [
+        0.580531,
+        -0.149608,
+        0.120195
+      ],
+      "get64_readback": {
+        "hue": 19660,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 51,
+      "x": 3,
+      "y": 6,
+      "uplight": false,
+      "rgb_hex": "#B86E00",
+      "rgb_float": [
+        0.72,
+        0.432,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 6554,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 36.003,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        53.309,
+        22.7501,
+        60.5601
+      ],
+      "oklab": [
+        0.605843,
+        0.055972,
+        0.123207
+      ],
+      "get64_readback": {
+        "hue": 6554,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 52,
+      "x": 4,
+      "y": 6,
+      "uplight": false,
+      "rgb_hex": "#00B856",
+      "rgb_float": [
+        0.0,
+        0.72,
+        0.336
+      ],
+      "hsbk_raw": {
+        "hue": 26942,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 147.999,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        65.5764,
+        -60.6986,
+        38.6074
+      ],
+      "oklab": [
+        0.683037,
+        -0.162444,
+        0.093007
+      ],
+      "get64_readback": {
+        "hue": 26942,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 53,
+      "x": 5,
+      "y": 6,
+      "uplight": false,
+      "rgb_hex": "#0000B8",
+      "rgb_float": [
+        0.0,
+        0.0,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 43690,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 240.0,
+        "saturation": 1.0,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        21.7363,
+        61.8723,
+        -84.2753
+      ],
+      "oklab": [
+        0.353176,
+        -0.02536,
+        -0.243409
+      ],
+      "get64_readback": {
+        "hue": 43690,
+        "saturation": 65535,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 54,
+      "x": 6,
+      "y": 6,
+      "uplight": false,
+      "rgb_hex": "#657BB8",
+      "rgb_float": [
+        0.396,
+        0.4824,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 40777,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 223.998,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        52.261,
+        8.312,
+        -34.4624
+      ],
+      "oklab": [
+        0.591309,
+        -0.003125,
+        -0.096702
+      ],
+      "get64_readback": {
+        "hue": 40777,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 55,
+      "x": 7,
+      "y": 6,
+      "uplight": false,
+      "rgb_hex": "#4C0038",
+      "rgb_float": [
+        0.3,
+        0.0,
+        0.22
+      ],
+      "hsbk_raw": {
+        "hue": 57525,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 315.999,
+        "saturation": 1.0,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        14.6463,
+        37.9201,
+        -13.1596
+      ],
+      "oklab": [
+        0.280324,
+        0.114935,
+        -0.035359
+      ],
+      "get64_readback": {
+        "hue": 57525,
+        "saturation": 65535,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 56,
+      "x": 0,
+      "y": 7,
+      "uplight": false,
+      "rgb_hex": "#4C3F2A",
+      "rgb_float": [
+        0.3,
+        0.246,
+        0.165
+      ],
+      "hsbk_raw": {
+        "hue": 6553,
+        "saturation": 29491,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 35.997,
+        "saturation": 0.45,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        27.436,
+        2.6175,
+        14.9128
+      ],
+      "oklab": [
+        0.37544,
+        0.008301,
+        0.036883
+      ],
+      "get64_readback": {
+        "hue": 6553,
+        "saturation": 29491,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 57,
+      "x": 1,
+      "y": 7,
+      "uplight": false,
+      "rgb_hex": "#8C65B8",
+      "rgb_float": [
+        0.5472,
+        0.396,
+        0.72
+      ],
+      "hsbk_raw": {
+        "hue": 48787,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 267.999,
+        "saturation": 0.45,
+        "brightness": 0.72,
+        "kelvin": 3500
+      },
+      "lab": [
+        49.8372,
+        32.2349,
+        -38.0477
+      ],
+      "oklab": [
+        0.580679,
+        0.072278,
+        -0.106279
+      ],
+      "get64_readback": {
+        "hue": 48787,
+        "saturation": 29491,
+        "brightness": 47185,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 58,
+      "x": 2,
+      "y": 7,
+      "uplight": false,
+      "rgb_hex": "#3A4C2A",
+      "rgb_float": [
+        0.228,
+        0.3,
+        0.165
+      ],
+      "hsbk_raw": {
+        "hue": 16748,
+        "saturation": 29491,
+        "brightness": 19660,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 92.001,
+        "saturation": 0.45,
+        "brightness": 0.29999,
+        "kelvin": 3500
+      },
+      "lab": [
+        30.18,
+        -14.3486,
+        18.1427
+      ],
+      "oklab": [
+        0.393097,
+        -0.039388,
+        0.044479
+      ],
+      "get64_readback": {
+        "hue": 16748,
+        "saturation": 29491,
+        "brightness": 19660,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 59,
+      "x": 3,
+      "y": 7,
+      "uplight": false,
+      "rgb_hex": "#940063",
+      "rgb_float": [
+        0.58,
+        0.0,
+        0.386667
+      ],
+      "hsbk_raw": {
+        "hue": 58253,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 319.998,
+        "saturation": 1.0,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        32.2169,
+        58.8945,
+        -13.6235
+      ],
+      "oklab": [
+        0.440302,
+        0.180985,
+        -0.035799
+      ],
+      "get64_readback": {
+        "hue": 58253,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 60,
+      "x": 4,
+      "y": 7,
+      "uplight": false,
+      "rgb_hex": "#3E6370",
+      "rgb_float": [
+        0.242,
+        0.3872,
+        0.44
+      ],
+      "hsbk_raw": {
+        "hue": 35680,
+        "saturation": 29491,
+        "brightness": 28835,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 195.999,
+        "saturation": 0.45,
+        "brightness": 0.43999,
+        "kelvin": 3500
+      },
+      "lab": [
+        39.685,
+        -9.2898,
+        -11.7439
+      ],
+      "oklab": [
+        0.476358,
+        -0.034674,
+        -0.032366
+      ],
+      "get64_readback": {
+        "hue": 35680,
+        "saturation": 29491,
+        "brightness": 28835,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 61,
+      "x": 5,
+      "y": 7,
+      "uplight": false,
+      "rgb_hex": "#94001E",
+      "rgb_float": [
+        0.58,
+        0.0,
+        0.116
+      ],
+      "hsbk_raw": {
+        "hue": 63350,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 347.997,
+        "saturation": 1.0,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        30.3524,
+        53.9668,
+        29.1829
+      ],
+      "oklab": [
+        0.420698,
+        0.157059,
+        0.063766
+      ],
+      "get64_readback": {
+        "hue": 63350,
+        "saturation": 65535,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 62,
+      "x": 6,
+      "y": 7,
+      "uplight": false,
+      "rgb_hex": "#829451",
+      "rgb_float": [
+        0.5104,
+        0.58,
+        0.319
+      ],
+      "hsbk_raw": {
+        "hue": 13835,
+        "saturation": 29491,
+        "brightness": 38010,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 75.999,
+        "saturation": 0.45,
+        "brightness": 0.58,
+        "kelvin": 3500
+      },
+      "lab": [
+        58.5139,
+        -17.4685,
+        32.9979
+      ],
+      "oklab": [
+        0.636263,
+        -0.048572,
+        0.079778
+      ],
+      "get64_readback": {
+        "hue": 13835,
+        "saturation": 29491,
+        "brightness": 38010,
+        "kelvin": 3500
+      }
+    },
+    {
+      "index": 63,
+      "x": 7,
+      "y": 7,
+      "uplight": true,
+      "rgb_hex": "#000000",
+      "rgb_float": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hsbk_raw": {
+        "hue": 0,
+        "saturation": 0,
+        "brightness": 0,
+        "kelvin": 3500
+      },
+      "hsbk_norm": {
+        "hue_deg": 0.0,
+        "saturation": 0.0,
+        "brightness": 0.0,
+        "kelvin": 3500
+      },
+      "lab": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "oklab": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "get64_readback": {
+        "hue": 0,
+        "saturation": 0,
+        "brightness": 0,
+        "kelvin": 3500
+      }
+    }
+  ],
+  "push": {
+    "performed": true,
+    "duration_ms": 300,
+    "power_before": 65535,
+    "mismatch_count": 0,
+    "mismatches": [],
+    "uplight_readback_brightness": 0
+  }
+}

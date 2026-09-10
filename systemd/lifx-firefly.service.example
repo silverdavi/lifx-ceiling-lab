@@ -1,0 +1,38 @@
+# Loop the firefly on a small always-on LAN host (Pi, NUC, home server).
+#
+# The fixture cannot store animations (see docs/protocol.md), so something on
+# the LAN must stream Set64 at 20 fps. That is ~20 small UDP packets per
+# second — negligible for the host and well within what the device accepts.
+#
+# Install:
+#   sudo cp systemd/lifx-firefly.service.example /etc/systemd/system/lifx-firefly.service
+#   # edit User, WorkingDirectory, and the config path below
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now lifx-firefly
+#
+# Stop it (and hand the fixture back to the LIFX app):
+#   sudo systemctl stop lifx-firefly
+#   lifx-play --restore-only
+
+[Unit]
+Description=LIFX Ceiling firefly animation
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Replace with the user that owns the checkout.
+User=lifx
+WorkingDirectory=/opt/lifx-ceiling-lab
+# config.yaml in the working directory supplies the fixture IP/serial and
+# rotation; or set LIFX_IP / LIFX_SERIAL / LIFX_ROTATE here instead.
+Environment=PYTHONPATH=/opt/lifx-ceiling-lab/src
+ExecStart=/usr/bin/python3 -m lifx_ceiling.play \
+    --frames examples/dynamic/frames/firefly.json --loop \
+    --state-file /var/lib/lifx-firefly/original.json
+Restart=on-failure
+RestartSec=5
+StateDirectory=lifx-firefly
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lifx-ceiling-lab"
+version = "0.1.0"
+description = "Calibrate and animate the LIFX Ceiling 8x8 matrix over the LAN protocol: calibration patterns, a firefly physics animation, image/GIF import, and a one-page local control widget."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "lifx-ceiling-lab contributors" }]
+keywords = ["lifx", "ceiling", "lan", "matrix", "set64", "smart-lighting"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Home Automation",
+]
+
+# The core client is standard library only. Extras pull in what each
+# optional piece needs.
+dependencies = []
+
+[project.optional-dependencies]
+examples = ["numpy>=1.26", "Pillow>=10"]
+ui = ["fastapi>=0.110", "uvicorn>=0.29", "python-multipart>=0.0.9", "Pillow>=10"]
+dev = ["numpy>=1.26", "Pillow>=10", "fastapi>=0.110", "uvicorn>=0.29", "python-multipart>=0.0.9"]
+
+[project.scripts]
+lifx-play = "lifx_ceiling.play:main"
+lifx-preview = "lifx_ceiling.preview:main"
+lifx-image = "lifx_ceiling.images:main"
+lifx-gif = "lifx_ceiling.gif:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

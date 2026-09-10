@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ceiling widget</title>
+<style>
+  :root {
+    --bg: #141210;
+    --ink: #ece7df;
+    --dim: #8f877b;
+    --accent: #ffd23f;
+    --line: #2c2822;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: radial-gradient(120% 90% at 50% -10%, #221d16 0%, var(--bg) 60%);
+    color: var(--ink);
+    font: 16px/1.5 "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  main { width: min(30rem, 92vw); padding: 3rem 0 4rem; }
+  h1 { font-size: 1.5rem; font-weight: 600; letter-spacing: .01em; margin: 0; }
+  .sub { color: var(--dim); margin: .25rem 0 2rem; font-size: .9rem; }
+  fieldset { border: 0; padding: 0; margin: 0 0 1.6rem; }
+  legend { color: var(--dim); font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; padding: 0; margin-bottom: .6rem; }
+  .row { display: flex; gap: .5rem; flex-wrap: wrap; }
+  button {
+    font: inherit; color: var(--ink); background: transparent;
+    border: 1px solid var(--line); border-radius: .5rem;
+    padding: .55rem 1rem; cursor: pointer; transition: border-color .15s, background .15s;
+  }
+  button:hover { border-color: var(--dim); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #201a08; font-weight: 600; }
+  button.active { border-color: var(--accent); color: var(--accent); }
+  .swatches { display: flex; gap: .55rem; flex-wrap: wrap; }
+  .swatch {
+    width: 2.1rem; height: 2.1rem; border-radius: 50%; border: 2px solid transparent;
+    cursor: pointer; padding: 0; transition: transform .12s, border-color .12s;
+  }
+  .swatch:hover { transform: scale(1.12); }
+  .swatch.selected { border-color: var(--ink); }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .slider-line { display: flex; align-items: center; gap: .8rem; }
+  .slider-line output { min-width: 2.6rem; text-align: right; font-variant-numeric: tabular-nums; }
+  .status { color: var(--dim); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  .status b { color: var(--ink); font-weight: 600; }
+  .error { color: #e08080; }
+  input[type=file] { color: var(--dim); font-size: .85rem; }
+  .hint { color: var(--dim); font-size: .8rem; margin-top: .4rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ceiling widget</h1>
+  <p class="sub">One LIFX Ceiling, one page. Local only.</p>
+
+  <fieldset>
+    <legend>Mode</legend>
+    <div class="row">
+      <button id="btn-firefly" class="primary">Firefly</button>
+      <button id="btn-image">Show upload</button>
+      <button id="btn-uplight">Uplight ring</button>
+      <button id="btn-release">Stop &amp; release</button>
+    </div>
+    <p class="hint">“Stop &amp; release” powers off and goes silent so the LIFX app controls the fixture again.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Colour</legend>
+    <div class="row" style="margin-bottom:.7rem">
+      <button id="mode-changing" class="active">Changing on impact</button>
+      <button id="mode-single">Single colour</button>
+    </div>
+    <div class="swatches" id="swatches"></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Peak brightness</legend>
+    <div class="slider-line">
+      <input type="range" id="brightness" min="1" max="100" value="60">
+      <output id="brightness-out">60</output>
+    </div>
+    <p class="hint">1 is a genuinely dark glow; the animation keeps its shape at any level.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Custom image</legend>
+    <input type="file" id="file" accept="image/*">
+    <p class="hint" id="upload-hint">Stills are shown once; animated GIFs loop. Then press “Show upload”.</p>
+  </fieldset>
+
+  <p class="status" id="status">connecting…</p>
+</main>
+
+<script>
+const PALETTE = ["#ffd23f","#ff6347","#f03dde","#8b5cf6","#3b82f6","#22d3ee","#34d399","#ffffff"];
+const state = { color: "#ffd23f", colorMode: "changing", brightness: 60 };
+
+const swatches = document.getElementById("swatches");
+for (const color of PALETTE) {
+  const b = document.createElement("button");
+  b.className = "swatch" + (color === state.color ? " selected" : "");
+  b.style.background = color;
+  b.title = color;
+  b.onclick = () => {
+    state.color = color;
+    state.colorMode = "single";
+    refreshLocal();
+    send(currentMode === "released" ? null : currentMode);
+  };
+  swatches.appendChild(b);
+}
+
+let currentMode = "released";
+
+function refreshLocal() {
+  document.querySelectorAll(".swatch").forEach(s =>
+    s.classList.toggle("selected", s.title === state.color));
+  document.getElementById("mode-changing").classList.toggle("active", state.colorMode === "changing");
+  document.getElementById("mode-single").classList.toggle("active", state.colorMode === "single");
+  document.getElementById("brightness-out").textContent = state.brightness;
+}
+
+async function send(mode) {
+  if (!mode) return;
+  const body = {
+    mode,
+    brightness: Number(state.brightness),
+    color_mode: state.colorMode,
+    color: state.color,
+  };
+  try {
+    const response = await fetch("/api/controls", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.detail || response.status);
+    showStatus(data);
+  } catch (error) {
+    document.getElementById("status").innerHTML =
+      `<span class="error">${error.message}</span>`;
+  }
+}
+
+function showStatus(data) {
+  currentMode = data.mode;
+  const parts = [`mode <b>${data.mode}</b>`, `brightness <b>${data.brightness}</b>`];
+  if (data.colorMode === "single") parts.push(`colour <b>${data.color}</b>`);
+  if (data.uploadedFrames) parts.push(`upload <b>${data.uploadedFrames} frame(s)</b>`);
+  if (!data.connected) parts.push("not connected yet");
+  if (data.error) parts.push(`<span class="error">${data.error}</span>`);
+  document.getElementById("status").innerHTML = parts.join(" · ");
+}
+
+document.getElementById("btn-firefly").onclick = () => send("firefly");
+document.getElementById("btn-image").onclick = () => send("image");
+document.getElementById("btn-uplight").onclick = () => send("uplight");
+document.getElementById("btn-release").onclick = () => send("release");
+document.getElementById("mode-changing").onclick = () => {
+  state.colorMode = "changing"; refreshLocal();
+  send(currentMode === "released" ? null : currentMode);
+};
+document.getElementById("mode-single").onclick = () => {
+  state.colorMode = "single"; refreshLocal();
+  send(currentMode === "released" ? null : currentMode);
+};
+
+const slider = document.getElementById("brightness");
+slider.oninput = () => { state.brightness = slider.value; refreshLocal(); };
+slider.onchange = () => send(currentMode === "released" ? null : currentMode);
+
+document.getElementById("file").onchange = async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+  const form = new FormData();
+  form.append("file", file);
+  const hint = document.getElementById("upload-hint");
+  hint.textContent = "uploading…";
+  try {
+    const response = await fetch("/api/upload", { method: "POST", body: form });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.detail || response.status);
+    hint.textContent = `ready: ${data.frames} frame(s) — press “Show upload”.`;
+  } catch (error) {
+    hint.innerHTML = `<span class="error">${error.message}</span>`;
+  }
+};
+
+async function poll() {
+  try {
+    const response = await fetch("/api/status");
+    const data = await response.json();
+    showStatus(data);
+  } catch {
+    document.getElementById("status").innerHTML =
+      '<span class="error">server unreachable</span>';
+  }
+}
+poll();
+setInterval(poll, 4000);
+</script>
+</body>
+</html>

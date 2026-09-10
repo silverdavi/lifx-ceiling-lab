@@ -1,0 +1,20 @@
+{
+  "name": "LIFX Ceiling default diffuser kernel",
+  "fixture": {
+    "product_id": 176,
+    "zones": 64,
+    "layout": "8x8 row-major Set64",
+    "uplight_index": 63
+  },
+  "fit": {
+    "method": "Gaussian PSF fitted to photos of patterns/psf-sparse, aperture from lit-disc extent, glare from dark-zone floor vs lit area",
+    "patterns": ["psf-sparse", "color-fill-63"],
+    "note": "measured on one unit; expect small per-unit variation"
+  },
+  "kernel": {
+    "psf_sigma_zones": 0.8,
+    "aperture_radius_zones": 4.318,
+    "veiling_glare": 0.06,
+    "corner_zones_outside_aperture": [0, 7, 56]
+  }
+}

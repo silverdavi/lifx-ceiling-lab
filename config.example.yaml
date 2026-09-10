@@ -1,0 +1,22 @@
+# Copy to config.yaml (git-ignored) and fill in your fixture.
+#
+# Everything also works with no config at all: the client broadcasts a LAN
+# discovery packet and takes the first LIFX device that answers. A fixed IP
+# just makes startup instant and lets you pick one fixture among several.
+
+fixture:
+  # LAN address of the ceiling fixture. Structural placeholder — replace it.
+  ip: xxx.xxx.xxx.xxx
+  port: 56700
+  # Device serial (also its MAC). d0:73:d5 is the LIFX OUI; the last six hex
+  # digits are unique to your unit. Find it in the LIFX app under
+  # Device Info, or leave blank to accept any discovered device.
+  serial: d073d5xxxxxx
+
+display:
+  # Clockwise rotation (0 / 90 / 180 / 270) so that "up" in frame files
+  # matches "up" on your physically mounted disc. Push examples/static and
+  # rotate until Mario is upright.
+  rotate: 0
+  flip_h: false
+  flip_v: false
