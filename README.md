@@ -6,11 +6,20 @@ a physics-simulated bouncing light with a comet trail, plus the calibration
 patterns and tools used to model the diffuser, an image/GIF → 8×8 pipeline,
 and a one-page local control widget.
 
+<p align="center">
+  <img src="docs/assets/firefly.gif" alt="Firefly animation — crisp 8×8 zones (left) and diffuser blur (right)" width="280">
+</p>
+
+<p align="center">
+  <img src="docs/assets/firefly-strip.png" alt="Firefly contact strip across several bounce frames" width="720">
+</p>
+
 No cloud, no tokens: the fixture speaks a binary UDP protocol on port 56700
 to anything on your LAN. The core client is Python standard library only.
 
 ```bash
-git clone <this repo> && cd lifx-ceiling-lab
+git clone https://github.com/silverdavi/lifx-ceiling-lab.git
+cd lifx-ceiling-lab
 pip install -e ".[examples,ui]"      # extras optional; core needs nothing
 cp config.example.yaml config.yaml   # optional: pin your fixture IP/serial
 lifx-play --frames examples/dynamic/frames/firefly.json --loop
@@ -72,7 +81,13 @@ two patterns (five sparse white probes; 63 maximally-contrasting colours),
 photographed the disc, and fitted a Gaussian point-spread of **σ ≈ 0.8
 zones** with a visible aperture of **≈ 4.32 zones** radius. Those defaults
 ship in `calibration/defaults/kernel.json` and are baked into the preview
-tool and the firefly's arena size. To calibrate your own unit:
+tool and the firefly's arena size.
+
+<p align="center">
+  <img src="docs/assets/psf-sparse.png" alt="Sparse luminance PSF probes (ideal labeled)" width="280">
+  &nbsp;
+  <img src="docs/assets/color-fill-63.png" alt="63 unique high-contrast colours" width="280">
+</p>
 
 ```bash
 python3 calibration/tools/push_pattern.py calibration/patterns/psf-sparse
@@ -128,4 +143,6 @@ Identifying values in this repo are structurally masked (`d073d5xxxxxx`,
 `xxx.xxx.xxx.xxx`) — see `PRIVACY.md`. `scripts/check_secrets.py` gates
 commits on no real serials/IPs in tracked files.
 
-MIT license.
+## License
+
+MIT · [silverdavi](https://github.com/silverdavi)

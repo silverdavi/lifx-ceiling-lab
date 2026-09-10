@@ -1,14 +1,34 @@
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
 *.egg-info/
+.eggs/
 build/
 dist/
+*.egg
+
 .venv/
 venv/
+.env
+.env.*
 
 # Your real device config lives here, never in git.
 config.yaml
 
-# Local state / previews
+# Local state / previews / scratch
 *.state.json
 preview-out/
+.my-kernel.json
+my-kernel.json
+*.mp4
+
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

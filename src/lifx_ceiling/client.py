@@ -278,6 +278,39 @@ class CeilingClient:
         )
         self._send(715, payload)
 
+    def echo(self, payload: bytes | None = None) -> float:
+        """Round-trip an EchoRequest (58); returns the RTT in seconds.
+
+        The device reflects the 64-byte payload in EchoResponse (59). This is
+        the cheapest way to answer "is the fixture reachable right now" —
+        it touches nothing and works regardless of power state.
+        """
+        if payload is None:
+            payload = os.urandom(8) + b"\x00" * 56
+        if len(payload) != 64:
+            raise ValueError("echo payload must be exactly 64 bytes")
+        started = time.monotonic()
+        response = self._request(58, 59, payload)
+        if response[:64] != payload:
+            raise ValueError("echo payload mismatch")
+        return time.monotonic() - started
+
+    def get_version(self) -> tuple[int, int]:
+        """Return (vendor, product) from StateVersion (33)."""
+        payload = self._request(32, 33)
+        vendor, product = struct.unpack_from("<II", payload)
+        return vendor, product
+
+    def get_firmware(self) -> str:
+        """Return host firmware as 'major.minor' from StateHostFirmware (15)."""
+        payload = self._request(14, 15)
+        _build, _reserved, minor, major = struct.unpack_from("<QQHH", payload)
+        return f"{major}.{minor}"
+
+    def get_label(self) -> str:
+        payload = self._request(23, 25)
+        return payload[:32].rstrip(b"\x00").decode("utf-8", errors="replace")
+
     def get_power(self) -> int:
         payload = self._request(20, 22)
         if len(payload) < 2:
@@ -328,17 +361,12 @@ class CeilingClient:
 # Discovery
 # --------------------------------------------------------------------------
 
-def discover(
+def discover_all(
     *,
-    serial: str | None = None,
     timeout: float = 1.5,
     broadcast: str = "255.255.255.255",
-) -> tuple[str, int, str] | None:
-    """Broadcast GetService; return ``(ip, port, serial)`` of the match.
-
-    With ``serial=None`` the first LIFX device to answer wins — fine for a
-    one-fixture network, otherwise pin the serial in config.yaml.
-    """
+) -> list[tuple[str, int, str]]:
+    """Broadcast GetService; collect every ``(ip, port, serial)`` that answers."""
     source = random.randrange(2, 2**32)
     flags = 1024 | (1 << 12) | (1 << 13)
     packet = (
@@ -347,7 +375,7 @@ def discover(
         + struct.pack("<BB", 1, 0)
         + struct.pack("<QHH", 0, 2, 0)
     )
-    expected_target = bytes.fromhex(serial.lower()) if serial else None
+    found: dict[str, tuple[str, int, str]] = {}
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
         sock.bind(("0.0.0.0", 0))
@@ -361,15 +389,31 @@ def discover(
                 break
             if len(data) < 41:
                 continue
-            if expected_target is not None and data[8:14] != expected_target:
-                continue
             if struct.unpack_from("<I", data, 4)[0] != source:
                 continue
             if struct.unpack_from("<H", data, 32)[0] != 3:
                 continue
             service, port = struct.unpack_from("<BI", data, 36)
             if service == 1:
-                return address[0], port, data[8:14].hex()
+                serial = data[8:14].hex()
+                found[serial] = (address[0], port, serial)
+    return list(found.values())
+
+
+def discover(
+    *,
+    serial: str | None = None,
+    timeout: float = 1.5,
+    broadcast: str = "255.255.255.255",
+) -> tuple[str, int, str] | None:
+    """Broadcast GetService; return ``(ip, port, serial)`` of the match.
+
+    With ``serial=None`` the first LIFX device to answer wins — fine for a
+    one-fixture network, otherwise pin the serial in config.yaml.
+    """
+    for found in discover_all(timeout=timeout, broadcast=broadcast):
+        if serial is None or found[2] == serial.lower():
+            return found
     return None
 
 
