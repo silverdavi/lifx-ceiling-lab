@@ -2,9 +2,18 @@
 
 Calibrate and animate a **LIFX Ceiling** (the round 8×8 matrix fixture) over
 the LAN protocol. This is the code behind the "firefly in a ceiling" post:
-a physics-simulated bouncing light with a comet trail, plus the calibration
-patterns and tools used to model the diffuser, an image/GIF → 8×8 pipeline,
-and a one-page local control widget.
+a physics-simulated bouncing light with a comet trail, a dim **night clock**
+readable at 2% brightness, plus the calibration patterns and tools used to
+model the diffuser, an image/GIF → 8×8 pipeline, and a one-page local control
+widget.
+
+<p align="center">
+  <img src="docs/assets/night-clock.gif" alt="Night clock — rim n-gon for the hour, centre red/green for the half hour" width="280">
+</p>
+
+<p align="center">
+  <img src="docs/assets/night-clock-strip.png" alt="Night clock faces from 6 pm through 6 am" width="720">
+</p>
 
 <p align="center">
   <img src="docs/assets/firefly.gif" alt="Firefly animation — crisp 8×8 zones (left) and diffuser blur (right)" width="280">
@@ -35,11 +44,39 @@ whatever the fixture displayed before.
 | `src/lifx_ceiling/` | LAN client (stdlib only), frame schema, rotate/flip/uplight transforms, player, preview, image/GIF converters |
 | `calibration/` | the two test patterns we photographed, the fitted default diffuser kernel, and tools to push patterns and fit your own kernel from a photo |
 | `examples/static/` | hand-authored 8×8 Mario portraits + a minimal push script |
-| `examples/dynamic/` | the firefly: physics generator and the baked 45 s / 900-frame loop |
+| `examples/dynamic/` | the firefly, the night clock, and their baked frame loops |
 | `examples/images/` | show any image or GIF on the fixture |
 | `ui/` | local FastAPI server + one-page widget |
 | `docs/protocol.md` | LAN protocol notes for the Ceiling, learned the hard way |
 | `systemd/` | example unit to loop the firefly from an always-on LAN host |
+
+## The night clock
+
+`examples/dynamic/night_clock.py` is a bedside clock for the disc, meant to
+run at **~2%** brightness. The rim is a regular n-gon of whole cells (1–6
+dots); the centre is a red or green blob for the half hour. Colour switches
+exactly when the count resets to 1, so each colour runs 1→6 without a jarring
+jump:
+
+| Dots | Shape | Green-yellow | Red-purple |
+| --- | --- | --- | --- |
+| 1 | single | 7 pm | 1 am |
+| 2 | pair | 8 pm | 2 am |
+| 3 | triangle | 9 pm | 3 am |
+| 4 | square | 10 pm | 4 am |
+| 5 | pentagon | 11 pm | 5 am |
+| 6 | hexagon | 12 am | 6 am (and 6 pm) |
+
+Centre: **red** :00–:29, **green** :30–:59. The disc centre sits on the corner
+of the four middle cells, so each rim vertex is one full cell — a split
+vertex reads dim and can vanish at 2%.
+
+```bash
+pip install -e ".[examples]"
+python3 examples/dynamic/night_clock.py            # bake frames + README GIF
+python3 examples/dynamic/night_clock.py --live     # stream the wall clock (~2%)
+lifx-play --frames examples/dynamic/frames/night_clock.json --loop
+```
 
 ## The firefly
 

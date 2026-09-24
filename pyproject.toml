@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "lifx-ceiling-lab"
 version = "0.1.0"
-description = "Calibrate and animate the LIFX Ceiling 8x8 matrix over the LAN protocol: calibration patterns, a firefly physics animation, image/GIF import, and a one-page local control widget."
+description = "Calibrate and animate the LIFX Ceiling 8x8 matrix over the LAN protocol: calibration patterns, a firefly physics animation, a dim night clock, image/GIF import, and a one-page local control widget."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.11"
